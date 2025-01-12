@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+
+  font-family: "Roboto", serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .navbar_top {
+    padding: 13px 0;
+    background-color: #0d2d3e;
+    color: #ffffff;
+    .navbar_top_wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar_time ul {
+      display: flex;
+      gap: 20px;
+      list-style-type: none;
+      align-items: center;
+    }
+    .navbar_time ul li {
+      font-size: 12px;
+      font-weight: 100;
+    }
+    .navbar_time ul li span {
+      font-size: 12px;
+      color: rgb(165, 12, 12);
+    }
+    .navbar_icon ul {
+      display: flex;
+      gap: 20px;
+      list-style-type: none;
+      align-items: center;
+    }
+    .navbar_icon ul a {
+      font-family: "Roboto", serif;
+      color: white;
+    }
+  }
+  .navbar_bottom {
+    background-color: white;
+
+    padding: 30px 0;
+    .navbar_bottom_wrapper {
+      display: flex;
+      justify-content: space-between;
+      .navbar_links ul {
+        display: flex;
+        gap: 20px;
+        list-style-type: none;
+        align-items: center;
+      }
+      .navbar_links ul a {
+        text-decoration: none;
+        color: #0d2d3e;
+      }
+    }
+  }
+}

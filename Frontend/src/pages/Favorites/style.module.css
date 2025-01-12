@@ -1,0 +1,78 @@
+@font-face {
+  font-family: Roboto;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+}
+@font-face {
+  font-family: Sarabun;
+  src: url("https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+}
+@font-face {
+  font-family: Poppins;
+  src: url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+}
+
+.favorite {
+    margin-top: 200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  .team_card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    .team_card_img {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    .team_desc {
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      h3 {
+        font-size: clamp(1rem, 5vw, 1.5rem);
+        font-family: Sarabun;
+        font-weight: 600px;
+        color: #1c165c;
+      }
+      span {
+        font-size: 14px;
+        margin-left: 30px;
+        text-transform: none;
+        font-weight: 300;
+        &::before {
+          width: 20px;
+          left: -30px;
+        }
+      }
+      .team_icons {
+        display: flex;
+        gap: 15px;
+        button {
+          cursor: pointer;
+          background-color: transparent;
+          border: none;
+          font-size: 20px;
+          color: #ff2143;
+          &:last-of-type {
+            color: #57667e;
+          }
+        }
+      }
+    }
+   
+  }
+}
+@media screen and (max-width:992px) {
+      .favorite{
+        grid-template-columns: repeat(2,1fr);
+      }
+}
+@media screen and (max-width:576px) {
+    .favorite{
+      grid-template-columns: 1fr;
+    }
+}

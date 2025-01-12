@@ -1,0 +1,249 @@
+@font-face {
+  font-family: Roboto;
+  src: url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+}
+@font-face {
+  font-family: Sarabun;
+  src: url("https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+}
+@font-face {
+  font-family: Poppins;
+  src: url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+}
+body {
+  background-color: #f7f7f7;
+}
+.main {
+  margin-top: 140px;
+  .linear {
+    margin-left: 100px;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-family: Roboto;
+    font-weight: 500;
+    margin-bottom: 22px;
+    text-transform: uppercase;
+    color: #eb566c;
+    position: relative;
+    &:before {
+      position: absolute;
+      content: "";
+      width: 70px;
+      height: 2px;
+      background: #eb566c;
+
+      left: -90px;
+      top: 50%;
+    }
+  }
+}
+.hero {
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 255),
+      rgba(255, 255, 255, 0) 90%
+    ),
+    url("../../assets/header-bg.jpg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-position: center;
+}
+.hero_desc {
+  display: flex;
+  align-items: center;
+  height: 75vh;
+  .hero_desc_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+
+    h1 {
+      font-family: Poppins;
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 1.2;
+      font-weight: 800;
+    }
+    p {
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      font-family: Roboto;
+    }
+    button {
+      background: #ff2143;
+      padding: 27px 44px;
+      text-transform: uppercase;
+      font-family: Roboto;
+      color: #fff;
+      width: 30%;
+      padding: 30px 0px;
+      font-size: 14 px;
+
+      font-weight: 500;
+      letter-spacing: 1px;
+      line-height: 0;
+      margin-bottom: 0;
+      margin: 10px;
+      cursor: pointer;
+
+      border: none;
+    }
+  }
+}
+
+.service_wrapper {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  .service_head {
+    display: flex;
+    flex-direction: column;
+    h2 {
+      font-size: clamp(1.5rem, 5vw, 3.2rem);
+      display: block;
+      color: #092c3f;
+      font-weight: 900;
+      font-family: Roboto;
+    }
+  }
+  .service_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    .service_card {
+      overflow: hidden;
+      position: relative;
+      background-color: white;
+      padding: 60px 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+      z-index: 1;
+      &:hover .service_card_icon,
+      h3,
+      p {
+        color: white;
+      }
+      &:hover p {
+        color: white;
+      }
+      &:hover h3 {
+        color: white;
+      }
+      &:hover .overlay {
+        transform: translateY(-50px);
+      }
+      .overlay {
+        width: 95%;
+        height: 95%;
+        background-color: #ff2143;
+        position: absolute;
+        transform: translateY(380px);
+        transition: all 0.4s;
+        z-index: -1;
+      }
+      .service_card_icon {
+        font-size: 60px;
+        color: #ff2143;
+      }
+      h3 {
+        font-size: clamp(1rem, 5vw, 1.5rem);
+        font-family: Sarabun;
+        font-weight: 600px;
+        color: #1c165c;
+      }
+      p {
+        text-align: center;
+        font-family: Poppins;
+        line-height: 2;
+        color: #57667e;
+      }
+    }
+  }
+}
+
+.team_wrapper {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  .team_head {
+    display: flex;
+    flex-direction: column;
+    h2 {
+      font-size: clamp(1.5rem, 5vw, 3.2rem);
+      display: block;
+      color: #092c3f;
+      font-weight: 900;
+      font-family: Roboto;
+    }
+  }
+  .team_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    .team_card {
+      background-color: white;
+      display: flex;
+      flex-direction: column; 
+      .team_card_img{
+    
+        img{
+            width: 100%;
+        }
+      }
+      .team_desc {
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        h3 {
+          font-size: clamp(1rem, 5vw, 1.5rem);
+          font-family: Sarabun;
+          font-weight: 600px;
+          color: #1c165c;
+        }
+        span {
+          font-size: 14px;
+          margin-left: 30px;
+          text-transform: none;
+          font-weight: 300;
+          &::before{
+            width: 20px;
+            left: -30px;
+           
+          }
+        }
+        .team_icons{
+            display: flex;
+            gap: 15px;
+            button{
+                cursor: pointer;
+                background-color: transparent;
+                border: none;
+                font-size: 20px;
+                color: #ff2143;
+                &:last-of-type{
+                    color: #57667e;
+                }
+            }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .service_wrapper .service_cards,
+  .team_wrapper .team_cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 576px) {
+  .service_wrapper .service_cards,
+  .team_wrapper .team_cards {
+    grid-template-columns: 1fr;
+  }
+}
