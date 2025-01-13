@@ -77,7 +77,6 @@ body {
       width: 30%;
       padding: 30px 0px;
       font-size: 14 px;
-
       font-weight: 500;
       letter-spacing: 1px;
       line-height: 0;
@@ -162,6 +161,63 @@ body {
     }
   }
 }
+.top_Services {
+  background-image: url("../../assets/section_bg02.jpg.webp");
+  background-size: cover;
+  background-position: center;
+}
+.top_Services_wrapper {
+  padding: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 80px;
+  .top_Services_desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+
+    .service_head {
+      display: flex;
+      flex-direction: column;
+      h2 {
+        font-size: clamp(1.5rem, 5vw, 3.2rem);
+        display: block;
+        color: white;
+        font-weight: 900;
+        font-family: Roboto;
+      }
+    }
+    p {
+      font-size: 15px;
+      color: #cecece;
+      font-family: Poppins;
+     
+      &:first-of-type {
+        font-size: 20px;
+        font-weight: 500;
+        color: #fff;
+        font-family: Roboto;
+      }
+    }
+ 
+      button {
+        background: #ff2143;
+        padding: 27px 44px;
+        text-transform: uppercase;
+        font-family: Roboto;
+        color: #fff;
+        width: 50%;
+        padding: 30px 0px;
+        font-size: 14 px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        cursor: pointer;
+        border: none;
+      }
+    }
+  }
+
 
 .team_wrapper {
   padding: 100px 0;
@@ -179,6 +235,43 @@ body {
       font-family: Roboto;
     }
   }
+  .filters {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .searchInp {
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #092c3f;
+    font-style: italic;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: #092c3f;
+      font-size: 1rem;
+    }
+  }
+  .sortList {
+    padding: 10px;
+    border-radius: 13px;
+    font-size: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #092c3f;
+    color: white;
+    font-style: italic;
+    &:focus {
+      outline: none;
+    }
+    option {
+      font-size: 1rem;
+      color: black;
+      background-color: white;
+      color: #092c3f;
+    }
+  }
   .team_cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -186,11 +279,10 @@ body {
     .team_card {
       background-color: white;
       display: flex;
-      flex-direction: column; 
-      .team_card_img{
-    
-        img{
-            width: 100%;
+      flex-direction: column;
+      .team_card_img {
+        img {
+          width: 100%;
         }
       }
       .team_desc {
@@ -210,35 +302,47 @@ body {
           margin-left: 30px;
           text-transform: none;
           font-weight: 300;
-          &::before{
+          &::before {
             width: 20px;
             left: -30px;
-           
           }
         }
-        .team_icons{
-            display: flex;
-            gap: 15px;
-            button{
-                cursor: pointer;
-                background-color: transparent;
-                border: none;
-                font-size: 20px;
-                color: #ff2143;
-                &:last-of-type{
-                    color: #57667e;
-                }
+        .team_icons {
+          display: flex;
+          gap: 15px;
+          button {
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+            color: #ff2143;
+            &:last-of-type {
+              color: #57667e;
             }
+          }
         }
       }
     }
   }
+}
+.brand{
+  padding: 50px 0;
+}
+.brand_wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+
 }
 
 @media screen and (max-width: 992px) {
   .service_wrapper .service_cards,
   .team_wrapper .team_cards {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .top_Services_wrapper{
+    grid-template-columns: 1fr  ;
   }
 }
 @media screen and (max-width: 576px) {

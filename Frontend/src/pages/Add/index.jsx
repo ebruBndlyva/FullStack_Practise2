@@ -3,15 +3,15 @@ import style from "./style.module.css"
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import Swal from 'sweetalert2'
-
+import { Helmet } from 'react-helmet';
 
 import { useNavigate } from 'react-router-dom';
-import { usePostMemberMutation } from '../../Redux/services/MemberApi';
+import { useGetMembersQuery, usePostMemberMutation } from '../../Redux/services/MemberApi';
 
 function Add() {
 
 
-
+  const { refetch } = useGetMembersQuery()
   const [postMember] = usePostMemberMutation()
 
   let navigate = useNavigate()
@@ -45,6 +45,7 @@ function Add() {
         confirmButtonText: "OK",
       })
       navigate("/");
+      refetch()
     },
   });
 
@@ -52,6 +53,9 @@ function Add() {
 
 
     <div className='content'>
+      <Helmet>
+        <title>Add</title>
+      </Helmet>
       <div className={style.add_form}>
 
         <form className={style.form} onSubmit={formik.handleSubmit}>

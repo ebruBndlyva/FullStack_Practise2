@@ -7,7 +7,8 @@ import { FaBehance } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 function Footer() {
   return (
-    <div className="content">
+   <div className={style.foot_wrapper}>
+     <div className="content">
       <div className={style.footer}>
         <div className={style.foot_desc}>Copyright ©2025 All rights reserved | This template is made with  by  <CiHeart /> Colorlib</div>
         <div className={style.foot_link}>
@@ -20,6 +21,7 @@ function Footer() {
         </div>
       </div>
     </div>
+   </div>
   )
 }
 

@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import style from "./style.module.css"
 import { FavoriteContext } from '../../context/FavoriteContext'
 import { MdDelete } from "react-icons/md";
+import { Helmet } from 'react-helmet';
 function Favorites() {
   let { favoriteData, setFavoriteData } = useContext(FavoriteContext)
 
@@ -11,6 +12,9 @@ function Favorites() {
   }
   return (
     <div className="content">
+      <Helmet>
+      <title>Favorites</title>
+    </Helmet>
       <div className={style.favorite}>
         {
           favoriteData.map((item) => (
